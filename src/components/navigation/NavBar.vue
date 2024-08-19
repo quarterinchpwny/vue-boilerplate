@@ -49,7 +49,7 @@ const socialLinks = [
 </script>
 
 <template>
-    <div class="flex text-center justify-between items-center p-5 container md:mx-auto">
+    <header class="flex text-center justify-between items-center p-5 container md:mx-auto">
         <div class="logo">qipz</div>
         <div class="navigation">
             <div class="navigation-section px-3">
@@ -87,7 +87,7 @@ const socialLinks = [
                 </div>
             </div> -->
         </div>
-    </div>
+    </header>
 </template>
 
 <style scoped lang="scss">

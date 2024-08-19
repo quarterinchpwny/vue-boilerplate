@@ -6,9 +6,9 @@ import FooterBar from '@/components/navigation/FooterBar.vue';
 <template>
     <div class="flex flex-col justify-around">
         <NavBar />
-        <div class="container p-5 h-screen md:mx-auto">
+        <main class="container p-5 h-screen md:mx-auto">
             <slot />
-        </div>
+        </main>
         <FooterBar />
     </div>
 </template>

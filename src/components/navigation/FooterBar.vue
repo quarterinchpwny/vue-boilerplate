@@ -26,10 +26,10 @@ const socialLinks = [
 
 <template>
     <footer>
-        <div class="p-5 container md:mx-auto py-16 sm:px-6 lg:px-8">
+        <div class="container p-5 py-16 sm:px-6 md:mx-auto lg:px-8">
             <div>
                 <div class="flex justify-center gap-6 sm:justify-end">
-                    <div class="gap-2 pr-2 flex">
+                    <div class="flex gap-2 pr-2">
                         <template v-for="(link, index) in socialLinks" key="index">
                             <div class="social">
                                 <component :is="link.icon" class="quickmenu-links" />
