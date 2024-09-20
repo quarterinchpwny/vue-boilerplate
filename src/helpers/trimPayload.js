@@ -1,10 +1,10 @@
-const trimPayload = (payload, exceptions = []) => {
+function trimPayload(payload, exceptions = []) {
     try {
         const _payload = Object.assign({}, payload);
         const keys = Object.keys(payload);
         keys.forEach((key) => {
             const field = _payload[key];
-            if (!exceptions.includes(key) && typeof field === "string") {
+            if (!exceptions.includes(key) && typeof field === 'string') {
                 _payload[key] = field.trim();
             }
         });
@@ -13,6 +13,6 @@ const trimPayload = (payload, exceptions = []) => {
     } catch (error) {
         return payload;
     }
-};
+}
 
 export default trimPayload;
