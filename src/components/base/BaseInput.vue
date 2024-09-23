@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <label :for="id" class="block text-sm font-medium text-gray-700">{{ label }}</label>
-        <input
-            :id="id"
-            v-model="modelValue"
-            :type="type"
-            :placeholder="placeholder"
-            :class="['mt-1 block w-full', inputClass]"
-            @input="$emit('update:modelValue', $event.target.value)"
-        />
-    </div>
+  <div>
+    <label :for="id" class="block text-sm font-medium text-gray-700">{{ label }}</label>
+    <input
+      :id="id"
+      v-model="modelValue"
+      :type="type"
+      :placeholder="placeholder"
+      :class="['mt-1 block w-full', inputClass]"
+      @input="$emit('update:modelValue', $event.target.value)"
+    />
+  </div>
 </template>
 
 <script setup>

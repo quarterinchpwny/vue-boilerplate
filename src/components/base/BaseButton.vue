@@ -1,14 +1,14 @@
 <template>
-    <button
-        :class="[
-            'inline-flex items-center justify-center rounded font-medium transition focus:outline-none',
-            sizeClass,
-            variantClass
-        ]"
-        @click="handleClick"
-    >
-        <slot>{{ label }}</slot>
-    </button>
+  <button
+    :class="[
+      'inline-flex items-center justify-center rounded font-medium transition focus:outline-none',
+      sizeClass,
+      variantClass
+    ]"
+    @click="handleClick"
+  >
+    <slot>{{ label }}</slot>
+  </button>
 </template>
 
 <script setup>
