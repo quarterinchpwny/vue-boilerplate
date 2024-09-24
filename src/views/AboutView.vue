@@ -1,5 +1,5 @@
 <script setup>
-import BaseCard from '@/components/base/BaseCard.vue';
+import BaseCard from '@/components/base/BaseCard.vue'
 </script>
 
 <template>

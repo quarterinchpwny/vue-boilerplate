@@ -18,7 +18,7 @@
     </div>
     <div class="quickmenu hidden items-center gap-2 md:flex">
       <div class="flex gap-2 pr-2">
-        <template v-for="(link, index) in socialLinks" key="index">
+        <template v-for="(link, index) in socialLinks" :key="index">
           <div class="social">
             <component :is="link.icon" class="quickmenu-links" />
           </div>
@@ -40,78 +40,79 @@
   </header>
 </template>
 <script setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import LinkedinSVG from '@/components/svg/LinkedinSVG.vue';
-import GithubSVG from '@/components/svg/GithubSVG.vue';
-import GitlabSVG from '@/components/svg/GitlabSVG.vue';
-import DarkThemeSVG from '@/components/svg/DarkThemeSVG.vue';
-import LightThemeSVG from '@/components/svg/LightThemeSVG.vue';
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import LinkedinSVG from '@/components/svg/LinkedinSVG.vue'
+import GithubSVG from '@/components/svg/GithubSVG.vue'
+import GitlabSVG from '@/components/svg/GitlabSVG.vue'
+import DarkThemeSVG from '@/components/svg/DarkThemeSVG.vue'
+import LightThemeSVG from '@/components/svg/LightThemeSVG.vue'
 
-const route = useRoute();
+const route = useRoute()
+
 const pageTitle = computed(() => {
-    return route.meta.pageTitle;
-});
+  return route.meta.pageTitle
+})
 
 const navigationLinks = [
-    {
-        label: 'home',
-        to: 'home-view'
-    },
-    {
-        label: 'about',
-        to: 'about-view'
-    },
-    {
-        label: 'projects',
-        to: 'projects-view'
-    }
-    // {
-    //     label: 'blog',
-    //     to: 'blogs-view'
-    // }
-];
+  {
+    label: 'home',
+    to: 'home-view'
+  },
+  {
+    label: 'about',
+    to: 'about-view'
+  },
+  {
+    label: 'projects',
+    to: 'projects-view'
+  }
+  // {
+  //     label: 'blog',
+  //     to: 'blogs-view'
+  // }
+]
 
 const socialLinks = [
-    {
-        label: 'github',
-        to: 'home-view',
-        icon: GithubSVG
-    },
-    // {
-    //     label: 'gitlab',
-    //     to: 'about-view',
-    //     icon: GitlabSVG
-    // },
-    {
-        label: 'linkedin',
-        to: 'projects-view',
-        icon: LinkedinSVG
-    }
-];
+  {
+    label: 'github',
+    to: 'home-view',
+    icon: GithubSVG
+  },
+  // {
+  //     label: 'gitlab',
+  //     to: 'about-view',
+  //     icon: GitlabSVG
+  // },
+  {
+    label: 'linkedin',
+    to: 'projects-view',
+    icon: LinkedinSVG
+  }
+]
 </script>
 <style scoped lang="scss">
 .quickmenu-links {
-    cursor: pointer;
-    &:hover {
-        stroke: var(--link-color-hover);
-    }
+  cursor: pointer;
+  &:hover {
+    stroke: var(--link-color-hover);
+  }
 }
 .navigation-active {
-    border-radius: 2px;
-    height: 4px;
-    box-shadow: 0 2px 25px 2px #fff;
+  border-radius: 2px;
+  height: 4px;
+  box-shadow: 0 2px 25px 2px #fff;
 }
 .navigation-section {
-    backdrop-filter: blur(15px);
-    background-color: rgba(242, 242, 242, 0.5);
-    border: 1px solid rgba(242, 242, 242, 0.21);
-    border-radius: 24px;
-    justify-content: space-between;
-    align-items: center;
-    height: 48px;
-    display: flex;
-    position: relative;
-    box-shadow: 0 10px 25px #00000026;
+  backdrop-filter: blur(15px);
+  background-color: rgba(242, 242, 242, 0.5);
+  border: 1px solid rgba(242, 242, 242, 0.21);
+  border-radius: 24px;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 10px 25px #00000026;
 }
 </style>
